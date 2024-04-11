@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="Images/4.jpeg" />
+    <title>Happy Birthday shreyuu !!</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <style>
+
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        
+        background: linear-gradient(120deg,  #d8b6dd,#9cf0e2);
+       /* background: linear-gradient(120deg, #1e0138, #442a80);*/
+        /*background: linear-gradient(120deg, #020202, #000000);*/
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #441608;
+    }
+    p {
+        font-size: 25px;
+        font-weight: bold;
+        font-family:'Times New Roman', Times, serif;
+    }
+    .secret-message {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #c6f7bc;
+        border-radius: 5px;
+    }
+    #reveal-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #f34b18;
+        color: #fff;
+        border: none;
+        border-radius: 0px;
+        cursor: pointer;
+    }
+    .photo-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .photo {
+        width: calc(25% - 20px); /* Adjusting width for 4 photos per row */
+        height: 300px;
+        width:300px;
+        margin: 10px;
+        border-radius: 2px;
+        border-bottom: 40px solid rgb(255, 255, 255);
+        object-fit: cover;
+        border-top: 14px solid rgb(255, 255, 255);
+        border-left: 14px solid rgb(255, 255, 255); 
+        border-right: 14px solid rgb(255, 255, 255);
+        filter: saturate(130%);
+    }
+    .heart {
+        color: red; 
+    }
+    @media (max-width: 768px) {
+        .photo {
+            width: calc(33.33% - 20px); /* Adjusting width for 3 photos per row */
+        }
+    }
+
+    /* Media query for even smaller screens */
+    @media (max-width: 480px) {
+        .photo {
+            width: calc(50% - 20px); /* Adjusting width for 2 photos per row */
+        }
+    }
+    .heart {
+        color: red; /* Setting the color of the heart emoji */
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>&#127881;Happy Birthday Shreyuu !&#127881;</h1>
+        <p>Wishing you a day filled with love, joy, and lots of surprises!</p>
+        <button id="reveal-button">Ithe click karu nko !!</button>
+        <div class="secret-message" id="secret-message">
+            <p> Yes, one piece mahit nahi kay ahe naa &#128514;&#128514;Happy Birthday makada ,kiti chota sa hota ani ata evdha motha zala !!
+                Always be happy and achieve everything you want. changla abhyas kr ani one day you will everything you want and remenber
+                I'm always with you. My best little brother ! keep going !! ❤️           
+                once again happy happy b'day makada💕
+                Enjoy your special day to the fullest!&#127881;</p>
+        </div>
+    </div>
+
+    <div id="photo-grid">
+        <img class="photo" src="Images/1.jpeg" alt="Photo 1">
+        <img class="photo" src="Images/2.jpeg" alt="Photo 2">
+        <img class="photo" src="Images/3.jpeg" alt="Photo 3">
+        <img class="photo" src="Images/4.jpeg" alt="Photo 3">
+        <img class="photo" src="Images/5.jpeg" alt="Photo 3">
+        <img class="photo" src="Images/6.jpeg" alt="Photo 3">
+        <img class="photo" src="Images/7.jpeg" alt="Photo 3">
+        <img class="photo" src="Images/9.jpeg" alt="Photo 3">
+        
+        
+        <!-- Add more photos as needed -->
+    </div>
+
+    <script>
+        document.getElementById('reveal-button').addEventListener('click', function() {
+            Swal.fire({
+                title: "Mahit hota nko mnhla tech karshil !! chl abb bata, what is the biggest mystery?",
+                input: 'text',
+                inputPlaceholder: 'hint:apla fav ahe !',
+                showCancelButton: true,
+                confirmButtonText: 'Submit',
+                confirmButtonColor: '#3085d6',
+                cancelButtonText: 'Cancel',
+                inputPlaceholderColor:'#000000',
+                allowOutsideClick: false, 
+                allowEscapeKey: false, 
+            }).then((result) => {
+                if (result.isConfirmed && result.value && result.value.toLowerCase() === "one piece") {
+                    Swal.fire({
+                        title: 'Samjhla ata !',
+                        confirmButtonText: 'HOO',
+                        icon: 'success',
+                        confirmButtonColor: '#3085d6',
+                        allowOutsideClick: false, 
+                    allowEscapeKey: false, 
+                    });
+                    document.getElementById('secret-message').style.display = 'block';
+                } else if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Nah!',
+                        text: 'aur soch ache se, baka !!',
+                        icon: 'error',
+                       
+                        confirmButtonColor: '#3085d6',
+                        allowOutsideClick: false, 
+                    allowEscapeKey: false, 
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
